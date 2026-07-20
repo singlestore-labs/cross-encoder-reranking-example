@@ -2,6 +2,8 @@
 
 **Attention**: The code in this repository is intended for experimental use only and is not fully tested, documented, or supported by SingleStore. Visit the [SingleStore Forums](https://www.singlestore.com/forum) to ask questions about this repository.
 
+## Overview
+
 Demonstrates how to improve search quality by reranking SingleStore vector search results with a cross-encoder model. Takes 50 results from SingleStore vector search and uses a cross-encoder to rerank them, producing a higher quality top 5. Shows before/after comparison to prove the improvement.
 
 **Pipeline:**
