@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 Installs: `pymysql`, `sentence-transformers`, `torch`, `tqdm`, `wikipedia-api`
 
-### 2. Create Database=
+### 2. Create Database
 
 ```sql
 CREATE DATABASE video_games_search;
