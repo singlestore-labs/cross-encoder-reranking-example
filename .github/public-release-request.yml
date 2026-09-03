@@ -1,0 +1,6 @@
+business_justification: >
+    Educational demo showing cross-encoder reranking with SingleStore vector search.
+    Demonstrates how to improve search quality by reranking vector search results.
+    Contains no proprietary SingleStore information.
+license: Apache-2.0
+primary_contact: ahilyakulkarni
