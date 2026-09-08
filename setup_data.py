@@ -108,6 +108,16 @@ def load_chunks_to_db(chunks):
 
     table_name = config['singlestore']['table_name']
     cursor = conn.cursor()
+
+    # Check if data already exists
+    cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+    existing_count = cursor.fetchone()[0]
+    if existing_count > 0:
+        print(f"  Table already has {existing_count} rows. Skipping insert.\n")
+        cursor.close()
+        conn.close()
+        return
+
     for chunk in tqdm(chunks, desc="  Inserting"):
         cursor.execute(f"INSERT INTO {table_name} (text) VALUES (%s)", (chunk,))
 
